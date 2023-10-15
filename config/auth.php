@@ -38,7 +38,11 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'usuarios', // Asegúrate de tener tu provider de usuarios aquí
+        ],
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'usuarios',
         ],
     ],
 
@@ -60,9 +64,9 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'usuarios' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => App\Models\Usuario::class,
         ],
 
         // 'users' => [
